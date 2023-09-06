@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Cadastro de Usuários</title>
+</head>
+<body>
+    <div class="container-fluid">
+    <h2>Cadastro de Usuários</h2>
+    <br>
+    <form class="row g-3">
+        <div class="col-md-4">
+          <label for="nome" class="form-label">Primeiro Nome</label>
+          <input type="text" class="form-control" id="nome">
+        </div>
+        <div class="col-md-4">
+          <label for="sobrenome" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="sobrenome">
+        </div>
+        <div class="col-4">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col-12">
+        </div>
+        <div class="col-4">
+            <label for="status" class="form-label">Status</label>
+            <select id="status" class="form-select">
+              <option selected>Selecione...</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Gerente">Gerente</option>
+              <option value="Usuário">Usuário</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="senha">
+        </div>
+        <div class="col-md-4">
+            <label for="csenha" class="form-label">Confirmar</label>
+            <input type="password" class="form-control" id="csenha">
+        </div>
+        <div class="col-12">
+        </div>
+        <div class="col-12">
+        <span id="btnUpdate" style="display: none;">
+          <span id="inputIDUpdate"></span>
+          <button onclick="updateData();" class="btn btn-primary">Salvar</button>
+          <button onclick="resetForm();" class="btn btn-warning">Limpar</button>
+        </span>
+        <span id="btnAdd">
+				  <button onclick="addData();" class="btn btn-primary">Adicionar</button>
+				  <button onclick="resetForm();" class="btn btn-warning">Limpar</button>
+				  <button onclick="deleteList();" class="btn btn-danger">Apagar Tudo</button>
+			  </span>
+        </div>
+      </form>
+      <br>
+      <table id="listTable" class="table table-striped table-light">
+		
+      </table>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/funcao.js"></script>
